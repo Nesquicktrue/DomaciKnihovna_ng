@@ -1,0 +1,37 @@
+<div class="container my-4">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Kód ISBN" aria-label="kod ISBN" aria-describedby="tlac-car-kod">
+        <button class="btn btn-outline-secondary" type="button" id="tlac-car-kod">
+            <i class="bi bi-upc-scan"></i>
+        </button>
+    </div>
+    
+    <div class="container d-sm-flex justify-content-evenly">
+        <div class="container">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Název knihy" aria-label="Název knihy">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Autor" aria-label="Autor">
+            </div>
+            <div class="d-flex justify-content-between">
+                <input type="number" class="form-control w-50" placeholder="Stran (nepovinné)" aria-label="Stran">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"  data-bs-target="#collapseExample"
+                aria-controls="collapseExample"><i class="bi bi-star-half" style="color:gold"></i>&nbsp;Ohodnotit</button>
+            </div>
+            <app-hodnoceni class="mx-1"></app-hodnoceni>
+        </div>
+        <div class="text-center">
+            <img class="rounded-3 img-thumbnail mx-1 text-center" src="../../assets/obal.jpeg">
+        </div>
+        
+    </div>
+        
+    <div class="input d-flex justify-content-between">
+            <button class="btn btn-success w-100" type="button"><i class="bi bi-plus-square"></i>&nbsp;
+                Uložit knihu</button>
+            </div>
+
+
+
+</div>
