@@ -7,6 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PridejknihuComponent } from './pridejknihu/pridejknihu.component';
 import { SeznamknihComponent } from './seznamknih/seznamknih.component';
 import { HodnoceniComponent } from './hodnoceni/hodnoceni.component';
+import { PatickaComponent } from './paticka/paticka.component';
+
+import { environment } from '../environments/environment';
+import { AngularFireModule} from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -14,13 +20,19 @@ import { HodnoceniComponent } from './hodnoceni/hodnoceni.component';
     HlavickaComponent,
     PridejknihuComponent,
     SeznamknihComponent,
-    HodnoceniComponent
+    HodnoceniComponent,
+    PatickaComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){         
+  }
+ }
