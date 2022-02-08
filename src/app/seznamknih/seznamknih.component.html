@@ -10,7 +10,13 @@
         <th scope="col" style="width: 10%" class="" data-colname="akce" data-order="desc">Detail </th>
 
     </thead>
-    <tbody id="myTable">
-
+    <tbody id="myTable" *ngFor="let kniha of seznamKnih">
+        <tr>
+            <td>{{ kniha.nazev }}</td>
+            <td>{{ kniha.autor }}</td>
+            <td>{{ kniha.rating }}</td>
+            <td>{{ kniha.pridano }}</td>
+            <td>akce</td>
+        </tr>
     </tbody>
 </table>

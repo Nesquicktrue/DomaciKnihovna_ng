@@ -14,6 +14,8 @@ import { AngularFireModule} from '@angular/fire/compat'
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

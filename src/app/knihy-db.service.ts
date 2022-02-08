@@ -7,7 +7,7 @@ import { Kniha } from './kniha.model';
 })
 export class KnihyDBService {
 
-  private dbPath = '/Knihy';
+  private dbPath = '/USER/Knihy';
   knihyRef: AngularFireList<Kniha>;
 
   constructor(private db: AngularFireDatabase) {
@@ -16,8 +16,8 @@ export class KnihyDBService {
   getAll(): AngularFireList<Kniha> {
     return this.knihyRef;
   }
-  create(tutorial: Kniha): any {
-    return this.knihyRef.push(tutorial);
+  create(kniha: Kniha): any {
+    return this.knihyRef.push(kniha);
   }
   update(key: string, value: any): Promise<void> {
     return this.knihyRef.update(key, value);

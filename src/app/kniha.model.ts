@@ -1,12 +1,11 @@
 export class Kniha {
-    "id": number;
     "isbn"?: number;
     "nazev": string;
     "autor": string;
-    "stran": number;
+    "stran"?: number;
     "precteno": boolean;
-    "rating": number;
+    "prectenoKdy"?: Date;
+    "rating"?: number;
     "hodnoceni"?: string;
     "pridano": Date;
-    "prectenoKdy"?: Date;
 }
